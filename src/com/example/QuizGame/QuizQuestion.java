@@ -40,12 +40,22 @@ public class QuizQuestion {
         this.question = question;
     }
 
+    public void displayQuestion()
+    {
+        System.out.println("The question is " + question);
+    }
+
     public String getWordAnswer() {
         return wordAnswer;
     }
 
     public void setWordAnswer(String wordAnswer) {
         this.wordAnswer = wordAnswer;
+    }
+
+    public void displayWordAnswer()
+    {
+        System.out.println("The answer is " + wordAnswer);
     }
 
     public double getNumericAnswer() {
