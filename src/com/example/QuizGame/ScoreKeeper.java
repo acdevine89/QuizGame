@@ -2,6 +2,22 @@ package com.example.QuizGame;
 
 public class ScoreKeeper {
 
+
+public void calculateScore()
+{
+    if (userDemoAnswer.equals(currentQuestion.getWordAnswer()))
+    {
+        System.out.println("Correct!");
+        quizScore++;
+    }
+    else
+    {
+        System.out.println("Incorrect.");
+        quizScore--;
+    }
+}
+
+
 //    private int quizScore = 0;
 //
 // public void changeScore(boolean rightAnswer)
