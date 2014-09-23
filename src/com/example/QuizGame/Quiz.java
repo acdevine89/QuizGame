@@ -33,8 +33,12 @@ public void setUpQuiz()
         quizSeries.add(newQuestion);
     }
 
-    //Alternate strategy with hardcoded QuizQuestion objects:
-    //
+    //Alternate strategy for setUpQuiz method with hard-coded QuizQuestion objects:
+    //QuizQuestion question1 = new QuizQuestion("What is your name?", "Annie");
+    //quizSeries.add(question1);
+    //QuizQuestion question2 = new QuizQuestion("How many times did you see Lord of the Rings in theaters?", 60);
+    //quizSeries.add(question2);
+
 }
 
 public void takeTheQuiz()
@@ -49,7 +53,7 @@ public void takeTheQuiz()
         System.out.print("Type your answer here: ");
         String userDemoAnswer = user.nextLine();
 
-        if (userDemoAnswer.equals(currentQuestion.getWordAnswer()))
+        if ((userDemoAnswer.equals(currentQuestion.getWordAnswer())) || (userDemoAnswer.equals(currentQuestion.getNumericAnswer())))
         {
             System.out.println("Correct!");
             theScoreKeeper.increaseScore();
@@ -60,6 +64,7 @@ public void takeTheQuiz()
             theScoreKeeper.decreaseScore();
         }
     }
+
 }
 
 public void scoreTheQuiz()

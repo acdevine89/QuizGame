@@ -5,6 +5,7 @@ public class QuizQuestion {
     private String question;
     private String wordAnswer;
     private int numericAnswer;
+    // Alternate for hard-coded QuizQuestion objects: private String evaluateNumAnswer;
 //    private boolean trueOrFalseAnswer;
 //    private char multipleChoiceAnswer;
 
@@ -50,11 +51,20 @@ public class QuizQuestion {
 //Set&Get Int Answer
     public void setNumericAnswer(int numericAnswer) {
         this.numericAnswer = numericAnswer;
+        //Alternate for hard-coded QuizQuestion objects: this.evaluateNumAnswer = String.valueOf(numericAnswer);
     }
 
     public double getNumericAnswer() {
         return numericAnswer;
     }
+
+//Alternate for hard-coded QuizQuestion objects:
+//    public String getAnswertoEvaluate()
+//    {
+//        return evaluateNumAnswer;
+//    }
+
+//Extra QuizQuestion types that I did not use:
 
 ////Set&Get Boolean Answer
 //    public void setTrueOrFalseAnswer(boolean trueOrFalseAnswer) {
