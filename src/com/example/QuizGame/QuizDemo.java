@@ -19,6 +19,7 @@ public class QuizDemo {
 
         for (int i = 0; i<userNumberofQuestions; i++)
         {
+            System.out.println();
             System.out.print("Give me a question: ");
             String userQuestion = user.nextLine();
 
@@ -29,14 +30,17 @@ public class QuizDemo {
             quizSeries.add(newQuestion);
         }
 
+        System.out.println();
+        System.out.println("Now let's test your knowledge! Take the quiz:");
 
         for (QuizQuestion currentQuestion : quizSeries)
         {
-            System.out.println(newQuestion.getQuestion());
+            System.out.println();
+            System.out.println(currentQuestion.getQuestion());
             System.out.print("Type your answer here: ");
             String userDemoAnswer = user.nextLine();
 
-            if (userDemoAnswer.equals(newQuestion.getWordAnswer()))
+            if (userDemoAnswer.equals(currentQuestion.getWordAnswer()))
             {
                 System.out.println("Correct!");
                 quizScore++;
@@ -49,7 +53,8 @@ public class QuizDemo {
 
         }
 
-    System.out.println("Your score is: " + quizScore);
+    System.out.println();
+    System.out.println("Your final score is: " + quizScore);
 
     }
 
