@@ -10,7 +10,7 @@ public class Quiz {
     QuizQuestion newQuestion;
     int quizScore = 0;
 
- public void greetings()
+public void greetings()
  {
      System.out.println("Hello, let's build a quiz!");
  }
@@ -46,8 +46,17 @@ public void takeTheQuiz()
         System.out.println(currentQuestion.getQuestion());
         System.out.print("Type your answer here: ");
         String userDemoAnswer = user.nextLine();
-        calculateScore(user);
 
+        if (userDemoAnswer.equals(currentQuestion.getWordAnswer()))
+        {
+            System.out.println("Correct!");
+            theScoreKeeper.increaseScore();
+        }
+        else
+        {
+            System.out.println("Incorrect.");
+            theScoreKeeper.decreaseScore();
+        }
     }
 }
 
@@ -57,6 +66,4 @@ public void finalScore()
     System.out.println("Your final score is: " + quizScore);
 }
 
-
 }
-
