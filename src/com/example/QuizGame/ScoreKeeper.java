@@ -1,7 +1,31 @@
 package com.example.QuizGame;
 
-/**
- * Created by anniedevine on 9/22/14.
- */
 public class ScoreKeeper {
+
+    private int quizScore = 0;
+
+ public void changeScore(boolean rightAnswer)
+ {
+     if(rightAnswer)
+     {
+         quizScore++;
+     }
+     if ((quizScore>0) && (!rightAnswer))
+     {
+         quizScore--;
+     }
+ }
+
+    public int getQuizScore() {
+        return quizScore;
+    }
+
+    public void setQuizScore(int quizScore) {
+        this.quizScore = quizScore;
+    }
+
+//    public displayQuizScore()
+//    {
+//        System.out.println("Your score is " + quizScore);
+//    }
 }

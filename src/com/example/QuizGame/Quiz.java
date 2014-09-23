@@ -1,7 +1,9 @@
 package com.example.QuizGame;
+import java.util.ArrayList;
 
-/**
- * Created by anniedevine on 9/22/14.
- */
 public class Quiz {
+
+    private static ArrayList<QuizQuestion> quizSeries = new ArrayList<QuizQuestion>();
+
 }
+
