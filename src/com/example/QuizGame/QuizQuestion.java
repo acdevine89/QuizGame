@@ -4,9 +4,9 @@ public class QuizQuestion {
 
     private String question;
     private String wordAnswer;
-    private double numericAnswer;
-    private boolean trueOrFalseAnswer;
-    private char multipleChoiceAnswer;
+    private int numericAnswer;
+//    private boolean trueOrFalseAnswer;
+//    private char multipleChoiceAnswer;
 
 //QuizQuestion Overloaded Constructors
     public QuizQuestion(String question, String wordAnswer) {
@@ -14,20 +14,20 @@ public class QuizQuestion {
         this.wordAnswer = wordAnswer;
     }
 
-    public QuizQuestion(String question, double numericAnswer) {
+    public QuizQuestion(String question, int numericAnswer) {
         this.question = question;
         this.numericAnswer = numericAnswer;
     }
 
-    public QuizQuestion(String question, boolean trueOrFalseAnswer) {
-        this.question = question;
-        this.trueOrFalseAnswer = trueOrFalseAnswer;
-    }
-
-    public QuizQuestion(String question, char multipleChoiceAnswer) {
-        this.question = question;
-        this.multipleChoiceAnswer = multipleChoiceAnswer;
-    }
+//    public QuizQuestion(String question, boolean trueOrFalseAnswer) {
+//        this.question = question;
+//        this.trueOrFalseAnswer = trueOrFalseAnswer;
+//    }
+//
+//    public QuizQuestion(String question, char multipleChoiceAnswer) {
+//        this.question = question;
+//        this.multipleChoiceAnswer = multipleChoiceAnswer;
+    //}
 
 //Set&Get Question
     public void setQuestion(String question) {
@@ -47,8 +47,8 @@ public class QuizQuestion {
         return wordAnswer;
     }
 
-//Set&Get Double Answer
-    public void setNumericAnswer(double numericAnswer) {
+//Set&Get Int Answer
+    public void setNumericAnswer(int numericAnswer) {
         this.numericAnswer = numericAnswer;
     }
 
@@ -56,22 +56,22 @@ public class QuizQuestion {
         return numericAnswer;
     }
 
-//Set&Get Boolean Answer
-    public void setTrueOrFalseAnswer(boolean trueOrFalseAnswer) {
-        this.trueOrFalseAnswer = trueOrFalseAnswer;
-    }
-
-    public boolean getTrueOrFalseAnswer() {
-        return trueOrFalseAnswer;
-    }
-
-//Set&Get Char Answer
-    public void setMultipleChoiceAnswer(char multipleChoiceAnswer) {
-        this.multipleChoiceAnswer = multipleChoiceAnswer;
-    }
-
-    public char getMultipleChoiceAnswer() {
-        return multipleChoiceAnswer;
-    }
+////Set&Get Boolean Answer
+//    public void setTrueOrFalseAnswer(boolean trueOrFalseAnswer) {
+//        this.trueOrFalseAnswer = trueOrFalseAnswer;
+//    }
+//
+//    public boolean getTrueOrFalseAnswer() {
+//        return trueOrFalseAnswer;
+//    }
+//
+////Set&Get Char Answer
+//    public void setMultipleChoiceAnswer(char multipleChoiceAnswer) {
+//        this.multipleChoiceAnswer = multipleChoiceAnswer;
+//    }
+//
+//    public char getMultipleChoiceAnswer() {
+//        return multipleChoiceAnswer;
+//    }
 
 }

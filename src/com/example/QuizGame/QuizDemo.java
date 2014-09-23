@@ -8,7 +8,7 @@ public class QuizDemo {
         aQuiz.greetings();
         aQuiz.setUpQuiz();
         aQuiz.takeTheQuiz();
-        aQuiz.finalScore();
+        aQuiz.scoreTheQuiz();
 
     }
 

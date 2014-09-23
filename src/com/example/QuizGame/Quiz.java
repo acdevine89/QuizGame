@@ -8,7 +8,6 @@ public class Quiz {
     Scanner user = new Scanner(System.in);
     ScoreKeeper theScoreKeeper = new ScoreKeeper();
     QuizQuestion newQuestion;
-    int quizScore = 0;
 
 public void greetings()
  {
@@ -33,6 +32,9 @@ public void setUpQuiz()
         newQuestion = new QuizQuestion(userQuestion, userAnswer);
         quizSeries.add(newQuestion);
     }
+
+    //Alternate strategy with hardcoded QuizQuestion objects:
+    //
 }
 
 public void takeTheQuiz()
@@ -60,10 +62,9 @@ public void takeTheQuiz()
     }
 }
 
-public void finalScore()
+public void scoreTheQuiz()
 {
-    System.out.println();
-    System.out.println("Your final score is: " + quizScore);
+    theScoreKeeper.finalScore();
 }
 
 }
