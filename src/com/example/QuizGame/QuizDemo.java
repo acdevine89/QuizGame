@@ -1,46 +1,58 @@
 package com.example.QuizGame;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class QuizDemo {
 
     public static void main(String[] args) {
-        QuizQuestion newQuestion;
+
+        ArrayList<QuizQuestion> quizSeries = new ArrayList<QuizQuestion>();
         Scanner user = new Scanner(System.in);
-        ScoreKeeper aScoreKeeper = new ScoreKeeper();
+        ScoreKeeper theScoreKeeper = new ScoreKeeper();
+        QuizQuestion newQuestion;
+        int quizScore = 0;
 
         System.out.println("Hello, let's build a quiz!");
         System.out.print("How many questions would you like to create? Type a number: ");
         int userNumberofQuestions = user.nextInt();
+        user.nextLine();
 
         for (int i = 0; i<userNumberofQuestions; i++)
         {
             System.out.print("Give me a question: ");
-            String userQuestion = ("What is my name?");
+            String userQuestion = user.nextLine();
 
             System.out.print("Now answer that question: ");
-            String userAnswer = ("Annie");
+            String userAnswer = user.nextLine();
 
             newQuestion = new QuizQuestion(userQuestion, userAnswer);
             quizSeries.add(newQuestion);
         }
 
-        for (Quiz currentQuestion : quizSeries)
+
+        for (QuizQuestion currentQuestion : quizSeries)
         {
             System.out.println(newQuestion.getQuestion());
             System.out.print("Type your answer here: ");
+            String userDemoAnswer = user.nextLine();
+
+            if (userDemoAnswer.equals(newQuestion.getWordAnswer()))
+            {
+                System.out.println("Correct!");
+                quizScore++;
+            }
+            else
+            {
+                System.out.println("Incorrect.");
+                quizScore--;
+            }
+
         }
 
-
-//        if (userAnswer.contains(myQuestion.getWordAnswer()))
-//        {
-//            System.out.println("Correct!");
-//        }
-//        else
-//        {
-//            System.out.println("Nope");
-//        }
-
+    System.out.println("Your score is: " + quizScore);
 
     }
+
+
 
 }
